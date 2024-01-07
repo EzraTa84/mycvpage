@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="cvDising.css">
+    <title>Document</title>
+</head>
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+body {
+  background: #585c68;
+  font-size: 17px;
+  line-height: 22px;
+  color: #555555;
+  text-align: right;
+}
+
+
+.theConter{
+  background: #0f39b8;
+  border-color: blueviolet;
+  border-width: 60px;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  
+}
+
+.semi-bold {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.resume {
+  width: 800px;
+  height: auto;
+  display: flex;
+  margin: 50px auto;
+   align-items: right;
+}
+
+.resume .resume_left {
+  position: relative;
+  left: 80%;
+  width: 280px;
+  background: #0bb5f4;
+  align-items: right;
+}
+
+.resume .resume_left .resume_profile {
+  width: 100%;
+  height: 220px;
+}
+
+.resume .resume_left .resume_profile img {
+  width: 100%;
+  height: 100%;
+}
+
+.resume .resume_left .resume_content {
+  padding: 0 25px;
+}
+
+.resume .title {
+  margin-bottom: 20px;
+}
+
+.resume .resume_left .bold {
+  color: #fff;
+}
+
+.resume .resume_left .regular {
+  color: #b1eaff;
+}
+
+.resume .resume_item {
+  padding: 5px 0;
+  border-bottom: 2px solid #b1eaff;
+}
+
+.resume .resume_left .resume_item:last-child,
+.resume .resume_right .resume_item:last-child {
+  border-bottom: 0px;
+}
+
+.resume .resume_left ul li {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.resume .resume_left ul li:last-child {
+  margin-bottom: 0;
+}
+
+.resume .resume_left ul li .icon {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  color: #0bb5f4;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 16px;
+  position: relative;
+  left: 95%;
+}
+
+.resume .icon i,
+.resume .resume_right .resume_hobby ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resume .resume_left ul li .data {
+  color:white;
+}
+
+.resume .resume_left .resume_skills ul li {  
+  
+  font-size: small;
+  display: flex;
+  margin-bottom: 3px;
+  color: #b1eaff;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.resume .resume_left .resume_skills ul li .skill_name {
+  width: 40%;
+  
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress {
+  width: 50%;
+  margin: 0 5px;
+  height: 5px;
+  background: #009fd9;
+  position: relative;
+  
+}
+
+.resume .resume_left .resume_skills ul li .skill_per {
+  width: 15%;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+}
+
+.resume .resume_left .resume_social .semi-bold {
+  color: #fff;
+  margin-bottom: 3px;
+  font-size: 4px;
+}
+
+.resume .resume_right {
+position: relative;
+  right: 20%;
+  width: 520px;
+  background: #fff;
+  padding: 25px;
+}
+
+.resume .resume_right .bold {
+  color: #0bb5f4;
+}
+
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul {
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+.resume .resume_right ul li {
+  position: relative;
+left: 0%;
+}
+
+.resume .resume_right ul li .date {
+  position: relative;
+  right: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.resume .resume_right ul li .info {
+  position: relative;
+  right: 15px;
+  margin-bottom: 20px;
+}
+
+.resume .resume_right ul li:last-child .info {
+  margin-bottom: 0;
+}
+
+.resume .resume_right .resume_work ul li:before,
+.resume .resume_right .resume_education ul li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 420px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid #0bb5f4;
+}
+
+.resume .resume_right .resume_work ul li:after,
+.resume .resume_right .resume_education ul li:after {
+  content: "";
+  position: absolute;
+left: 100%;
+  top: 14px;
+  left: 424px;
+  width: 2px;
+  height: 115px;
+  background: #0bb5f4;
+}
+
+.resume .resume_right .resume_hobby ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume .resume_right .resume_hobby ul li {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #0bb5f4;
+  border-radius: 50%;
+  position: relative;
+  color: #0bb5f4;
+}
+
+.resume .resume_right .resume_hobby ul li i {
+  font-size: 30px;
+}
+
+.resume .resume_right .resume_hobby ul li:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -52px;
+  width: 50px;
+  height: 2px;
+  background: #0bb5f4;
+}
+
+.resume .resume_right .resume_hobby ul li:last-child:before {
+  display: none;
+}
+
+.skillCategory{
+  text-align: left;
+}
+
+.detelsPerson{
+  text-align: right;
+}
+
+.skilsConteinet{
+  background-color:#0490c4;;
+ 
+border-width: 10px;
+}
+</style>
+
+<body>
+  
+ <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<div class="resume">
+   <div class="resume_left">
+<!--
+     <div class="resume_profile">
+       <img src="mypic.jpeg" alt="profile_pic">
+     </div>
+-->
+
+
+     <div class="resume_content">
+       <div class="resume_item resume_info">
+         <ul>
+
+          <li>
+            <div class="icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="data bold">
+              טיאר עזרא 
+            </div>
+          </li>
+
+           <li>
+             <div class="icon">
+               <i class="fas fa-map-signs"></i>
+             </div>
+             <div class="data bold">
+               כרמיאל מורד הגיא 
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fas fa-mobile-alt"></i>
+             </div>
+             <div class="data bold">
+              0547724475
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fas fa-envelope"></i>
+             </div>
+             <div class="data ">
+              tayarezra@gmail.com
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fas fa-car"></i>
+             </div>
+             <div class="data bold">
+                B,D1
+             </div>
+           </li>
+         </ul>
+       </div>
+
+
+       <div class="resume_item resume_skills">      
+         
+        <p class="bold" >שפות</p>        
+      <ul>    
+        <li>
+          <div class="skill_name">
+            עברית
+          </div>
+          <div class="skill_progress">
+            <span style="width: 100%;"></span>
+          </div>
+          <div class="skill_per">100%</div>
+        </li>
+        <li>
+          <div class="skill_name">
+            אנגלית
+          </div>
+          <div class="skill_progress">
+            <span style="width: 90%;"></span>
+          </div>
+          <div class="skill_per">90%</div>
+        </li>
+  
+      </ul>
+    </div>
+
+
+
+       <div class="resume_item resume_skills">
+      <p class="bold" > ידע בשפות תכנות </p>
+      
+     <p class="bold"> OFFICE שליטה מלאה בכל ישומי</p> 
+     <hr style="border: #0bb5f4;"></hr>
+           <p class="bold skillCategory" >frontend</p>        
+         
+        
+           <ul>
+           <li>
+             <div class="skill_name">
+               HAML
+             </div>
+             <div class="skill_progress">
+               <span style="width: 95%;"></span>
+             </div>
+             <div class="skill_per">95%</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               CSS
+             </div>
+             <div class="skill_progress">
+               <span style="width: 90%;"></span>
+             </div>
+             <div class="skill_per">90%</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               SASS
+             </div>
+             <div class="skill_progress">
+               <span style="width: 70%;"></span>
+             </div>
+             <div class="skill_per">70%</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               JS
+             </div>
+             <div class="skill_progress">
+               <span style="width: 90%;"></span>
+             </div>
+             <div class="skill_per">95%</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               JQUERY
+             </div>
+             <div class="skill_progress">
+               <span style="width: 85%;"></span>
+             </div>
+             <div class="skill_per">85%</div>
+           </li>
+           <li>
+            <div class="skill_name">
+              REACT TS
+            </div>
+            <div class="skill_progress">
+              <span style="width: 80%;"></span>
+            </div>
+            <div class="skill_per">80%</div>
+          </li>
+          <li>
+            <div class="skill_name">
+              REACT REDUX
+            </div>
+            <div class="skill_progress">
+              <span style="width: 80%;"></span>
+            </div>
+            <div class="skill_per">80%</div>
+          </li>
+          <li>
+            <div class="skill_name">
+              BOOTSTRAP
+            </div>
+            <div class="skill_progress">
+              <span style="width: 95%;"></span>
+            </div>
+            <div class="skill_per">95%</div>
+          </li>
+          <li>
+            <div class="skill_name">
+              EXPRESS
+            </div>
+            <div class="skill_progress">
+              <span style="width: 80%;"></span>
+            </div>
+            <div class="skill_per">80%</div>
+          </li>
+         
+         </ul>
+         
+
+
+       </div>    
+       <div class="resume_item resume_skills">      
+         
+          <p class="bold skillCategory" text-a>backend</p>        
+        <ul>
+          <li>
+            <div class="skill_name">
+             C#
+            </div>
+            <div class="skill_progress">
+              <span style="width: 80%;"></span>
+            </div>
+            <div class="skill_per">80%</div>
+          </li>
+          <li>
+            <div class="skill_name">
+              C++
+            </div>
+            <div class="skill_progress">
+              <span style="width: 70%;"></span>
+            </div>
+            <div class="skill_per">70%</div>
+          </li>
+          <li>
+            <div class="skill_name">
+              ASP.NET
+            </div>
+            <div class="skill_progress">
+              <span style="width: 70%;"></span>
+            </div>
+            <div class="skill_per">70%</div>
+          </li>
+          <li>
+            <div class="skill_name">
+              PHP
+            </div>
+            <div class="skill_progress">
+              <span style="width: 70%;"></span>
+            </div>
+            <div class="skill_per">70%</div>
+          </li>
+          <li>
+            <div class="skill_name">
+              JAVA SCRIPT
+            </div>
+            <div class="skill_progress">
+              <span style="width: 90%;"></span>
+            </div>
+            <div class="skill_per">90%</div>
+          </li>
+
+          <li>
+            <div class="skill_name">
+              JAVA
+            </div>
+            <div class="skill_progress">
+              <span style="width: 80%;"></span>
+            </div>
+            <div class="skill_per">80%</div>
+          </li>
+
+          <li>
+            <div class="skill_name">
+              NODE.JS
+            </div>
+            <div class="skill_progress">
+              <span style="width: 85%;"></span>
+            </div>
+            <div class="skill_per">85%</div>
+          </li>
+
+          <li>
+            <div class="skill_name">
+              PYTHON
+            </div>
+            <div class="skill_progress">
+              <span style="width: 50%;"></span>
+            </div>
+            <div class="skill_per">50%</div>
+          </li>
+
+          
+        </ul>
+      </div>
+       
+       
+      <div class="resume_item resume_skills">
+        
+          <p class="bold skillCategory">BATABASE</p>
+        
+        <ul>
+          <li>
+            <div class="skill_name">
+             MY SQL
+            </div>
+            <div class="skill_progress">
+              <span style="width: 90%;"></span>
+            </div>
+            <div class="skill_per">90%</div>
+          </li>
+          <li>
+            <div class="skill_name">
+              SQL SERVER
+            </div>
+            <div class="skill_progress">
+              <span style="width: 85%;"></span>
+            </div>
+            <div class="skill_per">85%</div>
+          </li>
+          <li>
+            <div class="skill_name">
+              MONGODB
+            </div>
+            <div class="skill_progress">
+              <span style="width: 90%;"></span>
+            </div>
+            <div class="skill_per">90%</div>
+          </li>
+          <li>
+            <div class="skill_name">
+              ACCESS
+            </div>
+            <div class="skill_progress">
+              <span style="width: 90%;"></span>
+            </div>
+            <div class="skill_per">90%</div>
+          </li>
+          <li>
+            <div class="skill_name">
+              ORACLE
+            </div>
+            <div class="skill_progress">
+              <span style="width: 60%;"></span>
+            </div>
+            <div class="skill_per">60%</div>
+          </li>
+
+
+        </ul>
+      </div>
+       
+       
+       
+       
+
+     </div>
+  </div>
+  <div class="resume_right">
+    <div class="resume_item resume_about">
+        <div class="title">
+           <p class="bold">קצת רקע</p>
+             <p>הנדסאי תוכנה מחפש משרה מלאה, לא בהכרח בתחום התכנות. קיים ניסיון בעבודה מול לקוחות וספקים, ורכשתי יכולות ניהול במגוון תחומים. ישנו ידע רב בתוכנות מחשב רבות. לומד מהר, יכולות טכניות גבוהות, מסור לעבודה, ובעל תקשורת בין אישית מעולה. מחפש מקום עבודה יציב וקבוע, שיכול להתאים לניסיוני או לחלקו. מקום שבו אוכל ללמוד דברים חדשים, להתפתח, להביא את עצמי לידי ביטוי ולתרום לארגון בצורה מקסימלית. יכולות להתאים משרות כמו איש תפ"י, אבטחת איכות, פקיד רכש, הלפ דסק, וכיוצא בזה
+
+
+
+
+
+             </p> 
+                  
+         
+          </div>
+
+
+<div class="resume_item resume_work">
+        <div class="title">
+           <p class="bold">ניסיון תעסוקתי</p>
+         </div>
+        <ul>
+            <li>
+                <div class="date">2007 - 2010</div> 
+                <div class="info">
+                     <p class="semi-bold">נציג מוקד שימור יזום סלקום</p> 
+                  <p> במסגרת התפקיד, היה עלי לבצע פניות יזומות ללקוחות החברה אשר הראו סימני נטישה, ולשמרם על ידי שירות אדיב וכושר שכנוע</p>
+                </div>
+            </li>
+
+            <li>
+              <div class="date">2010 - 2012</div>
+              <div class="info">
+                     <p class="semi-bold">אחמ"ש במוקד תמיכה טכנית   (yes)</p> 
+                  <p> במסגרת התפקיד, ניהול צוות מוקדנים, פתרון בעיות, ראיונות, שיחות משוב, התנהלות מול מנהלים בכירים, ועוד</p>
+                </div>
+            </li>
+            <li>
+
+
+
+            <li>
+              <div class="date">2012 - 2015</div>
+              <div class="info">
+                     <p class="semi-bold">טכנאי רשתות ומחשבים לב מחשבים</p> 
+                  <p>במסגרת התפקיד, פתרון תקלות חומרה ותוכנה, מתן שירותי תמיכה, הקמת רשתות לעסקים/פרטיים, ומתן מענה מקיף לעמדות קצה של הלקוח</p>
+                </div>
+            </li>
+            <li>
+              <div class="date">נכון ל 2023</div>
+              <div class="info">
+                     <p class="semi-bold">.עצמאי עוסק מורשה בתחום המשלוחים, הפצה,והסעים</p> 
+                  <p></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+<!--  שירות צבאי -->
+    <div class="resume_item resume_work">
+      <div class="title">
+         <p class="bold">שירות צבאי</p>
+       </div>
+      <ul>
+          <li>
+              <div class="date">2003 - 2006</div> 
+              <div class="info">
+                   <p class="semi-bold">שירות מלא 3 שנים גדוד 12 גולני</p>      
+          </li>
+    
+      </ul>
+  </div>
+
+    
+  <div class="resume_item resume_work">
+    <div class="title">
+       <p class="bold"> השכלה</p>
+     </div>
+    <ul>      
+        <li>
+          <div class="date">2012-2015</div>
+          <div class="info">
+                 <p class="semi-bold">הנדסאי תוכנה אורט בראודה כרמיאל </p> 
+              <p> במסגרת הלימודים, הכרה ולמידה מעמיקה של עולם המחשב והרשת, בעיקר למידה של שפות תכנות רבות באופן תאורטי ודרך מעבדות ופרוייקטים. עמידה בכל הבחינות הנדרשות, סיום לימודים בממוצע 80. כמו כן, יש בידי דיפלומה הנדסאי תוכנה</p>
+            </div>
+        </li>
+
+
+        <li>
+          <div class="date">2002</div>
+          <div class="info">
+                 <p class="semi-bold"> השכלה תיכונית, 12 שנות לימוד, בגרות מלאה, 5 מתמטיקה, 4 אנגלית</p> 
+              <p></p>
+            </div>
+        </li>
+       
+    </ul>
+</div>
+  
+  
+    <div class="title">
+      <p class="bold">כישורים</p>
+      <p class="semi-bold">
+        מסור לעבודה, בעל מוטיבצייה גבוהה, אחראי ומסודר, משמעת עצמית גבוהה. אדיב, אוהב לעבוד בצוות ומשתלב בקלות. מגדיל ראש, אוהב ללמוד ותופס מהר דברים חדשים. יכולת ביטוי גבוהה וכישורי שכנוע במשא ומתן. התמודדות עם מצבים מאתגרים ויכולות ניהול של צוותים, זמן, תהליכים, כספים בתקציב מוגדר מראש, רשומות ופרוייקטים למינהם. עומד ביעדים הנדרשים 
+      </p>
+    </div>
+  
+</body>
+</html>
